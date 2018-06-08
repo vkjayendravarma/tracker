@@ -1,6 +1,6 @@
 var messagesRef = firebase.database().ref('data');
 
-$("#date").val(date);
+
 $("form").submit(function (e) {
     e.preventDefault();
     var date = new Date();
