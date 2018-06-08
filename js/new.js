@@ -1,9 +1,11 @@
 var messagesRef = firebase.database().ref('data');
-var date = new Date();
+
 $("#date").val(date);
 $("form").submit(function (e) {
     e.preventDefault();
-    var date = $("#date").val();
+    var date = new Date();
+    date = date.toString();
+    
     var ConsignmentNumber = $("#Consignment").val();
     var order = $("#order").val();
     var email = $("#email").val();
