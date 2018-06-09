@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <title>update</title>
+   
+    <title>Document</title>
 </head>
+
 <body>
-    
-    <form>
-        <legend>Form title</legend>
-    
-        <div class="form-group">
-            <label for="">label</label>
-            <input type="text" class="form-control" id="consignment" placeholder="Input field">
-        </div>
-        <div class="form-group">
-                <label for="">label</label>
-                <input type="text" class="form-control" id="stat" placeholder="Input field">
-            </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <input id="myInput" type="text" placeholder="Search.." onkeyup="myFunction()">
+    <table id="myTable">
+        <tr>
+            <th> date and time</th>
+            <th> consignment Number </th>
+            <th>order</th>
+            <th>email</th>
+            <th> phone</th>
+            <th>to address</th>
+            <th>from address</th>
+            <th>weight</th>
+            <th> dimensions</th>
+            <th>status</th>
+        </tr>
+        
 
-    <div class="data"> 
 
-    </div>
-    
+    </table>
 </body>
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script>
@@ -45,5 +44,6 @@
     firebase.initializeApp(config);
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/update.js"></script>
+<script src="js/filter.js"></script>
+<script src="js/search.js"></script>
 </html>

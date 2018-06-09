@@ -4,7 +4,10 @@ var messagesRef = firebase.database().ref('data');
 $("form").submit(function (e) {
     e.preventDefault();
     var date = new Date();
-    date = date.toString();
+    var d;
+    var month = date.getMonth()+1;
+    d = date.getDate() + "/" + month + "/" + date.getFullYear() + "  " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    date = d.toString();
     
     var ConsignmentNumber = $("#Consignment").val();
     var order = $("#order").val();
@@ -16,20 +19,20 @@ $("form").submit(function (e) {
     var dimensions = $("#dimensions").val();
     var status;
     var postdata = {
-        'date and time': date,
-        'consignmentNumber': ConsignmentNumber,
+        'date_and_time': date,
+        'consignment_Number': ConsignmentNumber,
         'order': order,
         'email': email,
         'phone': phone,
-        'to address': toAddr,
-        'from address': fromAddr,
+        'to_address': toAddr,
+        'from_address': fromAddr,
         'weight': weight,
         'dimensions': dimensions,
         'status': 'received',
     };
     var newPostRef = firebase.database().ref();
     newPostRef.push(postdata);
+ 
     $("form")[0].reset();
     location.reload();
 })
-       
