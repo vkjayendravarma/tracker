@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Courier tracker</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    
+    <!-- internal css -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container-fluid form">
+        <form id="login">
+            <h2 class="form_headder">login</h2>
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" name="" class="input" id="id">
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" name="" id="pass">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary ">Submit</button>
+            <p id="login-stats"></p>
+        </form>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyC5cORTGHa3YrP0H5Kh-5bxaFx_tkb4Ito",
+        authDomain: "shipment-t.firebaseapp.com",
+        databaseURL: "https://shipment-t.firebaseio.com",
+        projectId: "shipment-t",
+        storageBucket: "",
+        messagingSenderId: "643418071962"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/index.js"></script>
+
+</html>

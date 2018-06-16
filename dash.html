@@ -8,23 +8,23 @@
     <title>Courier tracker</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap core CSS     -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!--  Material Dashboard CSS    -->
     <link href="assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="assets/css/demo.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
     <style type="text/css">
-        .Update-button {
-            margin-right: 30px !important;
+        .tick-box {
+            color: white;
+            margin-right: 15px;
         }
 
-        .data label {
-            font-weight: 500;
-            color: black;
-        }
-
-        .Data_padding {
-            padding: 1em;
+        .target_row {
+            height: 50px;
         }
     </style>
 </head>
@@ -39,7 +39,7 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li>
+                    <li class="active">
                         <a href="dash.html">
                             <i class="material-icons">dashboard</i>
                             <p>Dashboard</p>
@@ -51,7 +51,7 @@
                             <p>New</p>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="update.html">
                             <i class="material-icons">content_paste</i>
                             <p>update</p>
@@ -81,67 +81,67 @@
 
                 </div>
             </nav>
+
+
+            <!-- body content -->
+
+
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">
-                                    <h4 class="title">Consignment Updater</h4>
+                                    <h4 class="title">Select
+                                        <br>
+                                        <form action="#">
 
+                                        </form>
+                                    </h4>
+                                    <p class="category">select and submit</p>
                                 </div>
-                                <div class="card-content">
-                                    <form id="get">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group label-floating" align="left">
-                                                    <label class="control-label">Consignment Number</label>
-                                                    <input type="text" class="form-control" id="number">
-                                                </div>
+                                <div class="card-content table-responsive">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group label-floating" align="left">
+                                                <label class="control-label" id="placeholder">Search with consignment number</label>
+                                                <input id="input" type="text" class="form-control" onkeyup="consignment()">
+
                                             </div>
                                         </div>
-
-                                        <button type="submit" class="btn btn-primary pull-right Update-button">Get data</button>
-                                        <div class="clearfix"></div>
-                                    </form>
-
-                                    <form id="post">
-                                        <div class="row">
-
-                                            <div class="col-md-5">
-                                                <div class="form-group">
-                                                    <label>Select status</label>
-                                                    <select class="form-control" id="status_update">
-
-                                                        <option>Intransit</option>
-                                                        <option>Out for delevery</option>
-                                                        <option>Delevered</option>
-                                                        <option>Delevery atempt failed</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8" style="padding-left: 1em">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Remarks</label>
-                                                    <textarea type="text" id="remarks" class="form-control" rows="2"></textarea>
-                                                </div>
-                                            </div>
+                                        <div class="col-md-8" style="margin-top: 1em">
+                                            <input type="radio" name="colors" id="consignment" checked> consignment Number
+                                            <input type="radio" name="colors" id="email_id"> Email id
+                                            <input type="radio" name="colors" id="Phone"> Phone
+                                            <input type="radio" name="colors" id="status"> status
                                         </div>
-                                        <button type="submit" id="change" class="btn btn-primary pull-right Update-button">Update Profile</button>
-                                        <div class="clearfix"></div>
-                                    </form>
-
-                                    <div class="data">
-
                                     </div>
+
+
+                                    <table id="table" class="table">
+                                        <tr class="text-primary">
+                                            <th> date and time</th>
+                                            <th> consignment Number </th>
+                                            <th>order</th>
+                                            <th>email</th>
+                                            <th> phone</th>
+                                            <th>to address</th>
+                                            <th>from address</th>
+                                            <th>weight</th>
+                                            <th> dimensions</th>
+                                            <th>status</th>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
+    </div>
 </body>
 <script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -152,7 +152,6 @@
 <script src="assets/js/bootstrap-notify.js"></script>
 <script src="assets/js/material-dashboard.js?v=1.2.0"></script>
 <script src="assets/js/demo.js"></script>
-
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script>
     // Initialize Firebase
@@ -166,8 +165,8 @@
     };
     firebase.initializeApp(config);
 </script>
-
-<script src="js/update.js"></script>
+<script src="js/search.js"></script>
+<script src="js/filter.js"></script>
 <script src="js/logout.js"></script>
 
 </html>

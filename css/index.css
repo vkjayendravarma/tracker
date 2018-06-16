@@ -1,0 +1,79 @@
+body {
+  background-color: #edeef2; }
+  body .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 70%;
+    background-color: #f4f7fc;
+    display: block;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 128px -44px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 128px -44px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 128px -44px rgba(0, 0, 0, 0.75); }
+    @media only screen and (max-device-width: 740px) {
+      body .form {
+        width: 95%;
+        min-height: 80%; } }
+    @media only screen and (min-device-width: 740px) and (max-device-width: 980px) {
+      body .form {
+        width: 65%;
+        height: 50%; } }
+    @media only screen and (min-device-width: 980px) and (max-device-width: 1080px) {
+      body .form {
+        width: 45%;
+        height: 35%; } }
+    @media only screen and (min-device-height: 980px) and (max-device-height: 1080px) {
+      body .form {
+        width: 35%;
+        height: 55%; } }
+    @media only screen and (min-device-height: 900px) and (max-device-height: 975px) {
+      body .form {
+        width: 35%;
+        height: 55%; } }
+    body .form form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 65%; }
+      body .form form .form_headder {
+        text-align: center;
+        margin-bottom: 1.5em; }
+      body .form form input {
+        border: none;
+        background: #f4f7fc;
+        border-bottom: #dbcaca solid 2px;
+        margin: 0 0 2em 0;
+        width: 100%;
+        font-size: 1.3em; }
+      body .form form input:focus {
+        outline: none; }
+      body .form form .btn-primary {
+        width: 100%;
+        margin: none;
+        padding: 0.5em;
+        font-size: 1.3em;
+        border: none;
+        color: #ffffff;
+        border-radius: 22.5px;
+        background-color: #2752dd;
+        -webkit-box-shadow: 4px 3px 30px rgba(50, 50, 50, 0.32);
+        -moz-box-shadow: 4px 3px 30px rgba(50, 50, 50, 0.32);
+        box-shadow: 4px 3px 30px rgba(50, 50, 50, 0.32);
+        transition: all 0.3s; }
+      body .form form .btn-primary:hover {
+        background-color: #4c6fe4; }
+      body .form form .btn-primary:focus {
+        outline: none;
+        box-shadow: none; }
+      body .form form .btn-primary:active {
+        transform: scale(0.97); }
+      body .form form .icon {
+        display: inline; }
+      body .form form .input {
+        display: inline; }
+
+/*# sourceMappingURL=index.css.map */
