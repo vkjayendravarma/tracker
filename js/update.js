@@ -58,7 +58,7 @@ $("#post").submit(function (send) {
             d = date.getDate() + "/" + month + "/" + date.getFullYear() + "  " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
             date = d.toString();
             console.log(date);     
-            text = text + " <br> " + date + " ?? " + update_remarks + " by " + temp;
+            text = text + " <br> " + date + " ?? " + update_remarks + " ?? updated by " + temp;
             var update = {
                 "status": update_status,
                 "remarks": text,
