@@ -37,7 +37,7 @@ $("form").submit(function (event) {
                 'remarks' : remarks,
             };
           console.log(postdata);
-            var newPostRef = firebase.database().ref();
+            var newPostRef = firebase.database().ref().child('consignment');
             newPostRef.push(postdata);
             $("form")[0].reset();           
             

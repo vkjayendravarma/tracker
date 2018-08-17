@@ -7,8 +7,8 @@
     <style>
       
       #map {
-        height: 100%;
-        width: 100%;
+        height: 50%;
+        width: 50%;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -22,14 +22,42 @@
     </style>
   </head>
   <body>
-    <div id="map "></div>
-    
+    <div id="map"></div>
+    <script>
+      
+      function initMap() {
+        var uluru = {lat: 17.781194, lng: 83.377222};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">event1</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>event1</b>lorem</p>'+
+            '<p>View on google maps: <a href="https://goo.gl/maps/H7fLhbDM13p">'+
+            'click here</a> '+
+            '</p>'+
+            '</div>'+
+            '</div>';
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          maxWidth: 500
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          title: 'Uluru (Ayers Rock)'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz9Q46tuVMR4_R7MLwHLTO_M4FoTwcMrY&callback=initMap">
+    </script>
   </body>
-  
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz9Q46tuVMR4_R7MLwHLTO_M4FoTwcMrY"></script>
-<script src="js/maps.js"></script>
-
-  
-
 </html>
-

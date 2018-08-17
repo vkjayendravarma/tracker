@@ -1,4 +1,4 @@
-var dbRef = firebase.database().ref("/");
+var dbRef = firebase.database().ref().child('consignment');
 $("#change").attr("disabled", "disabled");
 var id;
 var text;

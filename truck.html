@@ -106,7 +106,7 @@
                         </a>
                     </li>
                     <li class="active">
-                        <a href="maps.html">
+                        <a href="truck.html">
 
                             <?xml version="1.0" encoding="iso-8859-1"?>
                             <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -204,17 +204,41 @@
                                         <button type="submit" class="btn btn-primary pull-right Update-button">Get data</button>
                                         <div class="clearfix"></div>
                                     </form>
+                                    <form id="post">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group label-floating" align="left">
+                                                    <label class="control-label">Truck Number</label>
+                                                    <input type="text" class="form-control" id="vehicle">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group label-floating" align="left">
+                                                    <label class="control-label">Latitude</label>
+                                                    <input type="text" class="form-control" id="lat">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group label-floating" align="left">
+                                                    <label class="control-label">Longitude</label>
+                                                    <input type="text" class="form-control" id="long">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary pull-right Update-button">Post data</button>
+                                        <div class="clearfix"></div>
+                                    </form>
                                 </div>                                
                             </div>
                         </div>
                     </div>
 
                     <link rel="stylesheet" href="css/maps.css">
-                    <div class=" maps">
+                    <div class="container-fluid maps">
                         <div id="map"></div>
                     </div>
-                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz9Q46tuVMR4_R7MLwHLTO_M4FoTwcMrY"></script>
-                    <script src="js/maps.js"></script>
+                   
                     
                 </div>
             </div>
@@ -245,7 +269,12 @@
     firebase.initializeApp(config);
 </script>
 
-<script src="js/update.js"></script>
+
 <script src="js/logout.js"></script>
 
+
+<script src="js/maps.js"></script>
+                    <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbMXqClLkxiJz_mltxTYwQYx-QAm8E8oo&callback=initMap">
+                    </script>
 </html>

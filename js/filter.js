@@ -2,7 +2,7 @@
 $(document).ready(function () {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            var searchRef = firebase.database().ref();
+            var searchRef = firebase.database().ref().child('consignment');
             var referance = [];
             searchRef.on("child_added", snap => {
                 referance = snap.val();
