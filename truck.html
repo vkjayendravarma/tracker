@@ -11,11 +11,20 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
     <link href="assets/css/demo.css" rel="stylesheet" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
     <style type="text/css">
         .Update-button {
             margin-right: 30px !important;
+        }
+
+        .data label {
+            font-weight: 500;
+            color: black;
+        }
+
+        .Data_padding {
+            padding: 1em;
         }
     </style>
 </head>
@@ -25,7 +34,7 @@
         <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-1.jpg">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    Courier tracker
+                    courier tracker
                 </a>
             </div>
             <div class="sidebar-wrapper">
@@ -52,31 +61,33 @@
                             <p style="display: inline;padding-left: 1.5em; ">Dashboard</p>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="new.html">
-
 
                             <?xml version="1.0" encoding="iso-8859-1"?>
                             <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;height: 20px;width: 20px;fill: #ffffff;display: inline;vertical-align: middle;margin-left: 0.6em"
+                                viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;height: 20px;width: 20px;fill: #a9afbb;display: inline;vertical-align: middle;margin-left: 0.6em"
                                 xml:space="preserve">
                                 <path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M38.5,28H28v11c0,1.104-0.896,2-2,2
 	s-2-0.896-2-2V28H13.5c-1.104,0-2-0.896-2-2s0.896-2,2-2H24V14c0-1.104,0.896-2,2-2s2,0.896,2,2v10h10.5c1.104,0,2,0.896,2,2
 	S39.604,28,38.5,28z" />
+                                <g>
+                                </g>
                                 
                             </svg>
+
                             <p style="display: inline;padding-left: 1.5em">New</p>
                         </a>
                     </li>
-                    <li>
+                    <li >
                         <a href="update.html">
 
                             <?xml version="1.0" encoding="iso-8859-1"?>
                             <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                             <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                width="52.54px" height="52.54px" viewBox="0 0 52.54 52.54" style="enable-background:new 0 0 52.54 52.54; height: 20px;width: 20px;fill: #a9afbb;display: inline;vertical-align: middle;margin-left: 0.6em"
+                                width="52.54px" height="52.54px" viewBox="0 0 52.54 52.54" style="enable-background:new 0 0 52.54 52.54;height: 20px;width: 20px;fill: #a9afbb;display: inline;vertical-align: middle;margin-left: 0.6em"
                                 xml:space="preserve">
                                 <g>
                                     <g>
@@ -91,16 +102,16 @@
                                 
                             </svg>
 
-                            <p style="display: inline;padding-left: 1.5em">update</p>
+                            <p style="display: inline;padding-left: 1.5em;">update</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="maps.html">
 
                             <?xml version="1.0" encoding="iso-8859-1"?>
                             <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                viewBox="0 0 477 477" style="enable-background:new 0 0 52.54 52.54; height: 20px;width: 20px;fill: #a9afbb;display: inline;vertical-align: middle;margin-left: 0.6em" xml:space="preserve">
+                                viewBox="0 0 477 477" style="enable-background:new 0 0 52.54 52.54; height: 20px;width: 20px;fill: #ffffff;display: inline;vertical-align: middle;margin-left: 0.6em" xml:space="preserve">
                                 <g>
                                     <g>
                                         <path d="M238.4,0C133,0,47.2,85.8,47.2,191.2c0,12,1.1,24.1,3.4,35.9c0.1,0.7,0.5,2.8,1.3,6.4c2.9,12.9,7.2,25.6,12.8,37.7
@@ -122,34 +133,35 @@
                         </a>
                     </li>
                     <li style="cursor: pointer;" id="logout">
-                        <a>
-
-                            <?xml version="1.0" encoding="iso-8859-1"?>
-                            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512; height: 20px;width: 20px;fill: #a9afbb;display: inline;vertical-align: middle;margin-left: 0.6em"
-                                xml:space="preserve">
-                                <g>
+                            <a>
+    
+                                <?xml version="1.0" encoding="iso-8859-1"?>
+                                <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512 512" style="enable-background:new 0 0 512 512; height: 20px;width: 20px;fill: #a9afbb;display: inline;vertical-align: middle;margin-left: 0.6em" xml:space="preserve">
                                     <g>
                                         <g>
-                                            <path d="M330.667,384h-21.333c-5.891,0-10.667,4.776-10.667,10.667v74.667h-256V42.667h256v74.667
+                                            <g>
+                                                <path d="M330.667,384h-21.333c-5.891,0-10.667,4.776-10.667,10.667v74.667h-256V42.667h256v74.667
                     c0,5.891,4.776,10.667,10.667,10.667h21.333c5.891,0,10.667-4.776,10.667-10.667V42.667C341.333,19.103,322.231,0,298.667,0h-256
                     C19.103,0,0,19.103,0,42.667v426.667C0,492.898,19.103,512,42.667,512h256c23.564,0,42.667-19.102,42.667-42.667v-74.667
                     C341.333,388.776,336.558,384,330.667,384z" />
-                                            <path d="M508.542,248.135l-128-117.333c-3.125-2.844-7.656-3.625-11.5-1.896c-3.875,1.698-6.375,5.531-6.375,9.76V160
+                                                <path d="M508.542,248.135l-128-117.333c-3.125-2.844-7.656-3.625-11.5-1.896c-3.875,1.698-6.375,5.531-6.375,9.76V160
                     c0,3.021,1.281,5.906,3.531,7.927l74.151,66.74H138.667c-5.896,0-10.667,4.771-10.667,10.667v21.333
                     c0,5.896,4.771,10.667,10.667,10.667h301.682l-74.151,66.74c-2.25,2.021-3.531,4.906-3.531,7.927v21.333
                     c0,4.229,2.5,8.063,6.375,9.76c1.375,0.615,2.844,0.906,4.292,0.906c2.615,0,5.198-0.969,7.208-2.802l128-117.333
                     C510.75,261.844,512,258.99,512,256S510.75,250.156,508.542,248.135z" />
+                                            </g>
                                         </g>
                                     </g>
-                                </g>
-                                
-                            </svg>
-
-                            <p style="display: inline;padding-left: 1.5em">Logout</p>
-                        </a>
-                    </li>
+                                    <g>
+                                    </g>
+                                    
+                                </svg>
+    
+                                <p style="display: inline;padding-left: 1.5em">Logout</p>
+                            </a>
+                        </li>
                 </ul>
             </div>
         </div>
@@ -170,98 +182,43 @@
             </nav>
             <div class="content">
                 <div class="container-fluid">
+                   
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">
-                                    <h4 class="title">New consignment</h4>
-                                    <p class="category">verify unique consignment number</p>
+                                    <h4 class="title">Truck Location Tracker</h4>
+
                                 </div>
                                 <div class="card-content">
-                                    <form class="post_maker">
+                                    <form id="get">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group label-floating" align="left">
-                                                    <label class="control-label">Consignment Number</label>
-                                                    <input type="text" id="Consignment" class="form-control" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Order Number</label>
-                                                    <input type="text" id="order" class="form-control" required>
+                                                    <label class="control-label">Truck Number</label>
+                                                    <input type="text" class="form-control" id="number">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">e-Mail id</label>
-                                                    <input type="email" id="email" class="form-control" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Contact number</label>
-                                                    <input type="number" id="phone" class="form-control" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">To Adress</label>
-                                                    <textarea type="text" id="toAddr" class="form-control" rows="5" required></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">From Adress</label>
-                                                    <textarea type="text" id="fromAddr" class="form-control" rows="5" required></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Weight in kilograms</label>
-                                                    <input type="text" id="weight" class="form-control" required>
-                                                </div>
-                                            </div>
 
-
-                                            <div class="col-md-2">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">length</label>
-                                                    <input type="text" id="length" class="form-control" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">breadth</label>
-                                                    <input type="text" id="breadth" class="form-control" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">height</label>
-                                                    <input type="text" id="height" class="form-control" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary pull-right Update-button">Update Profile</button>
-                                <div class="clearfix"></div>
-                                </form>
+                                        <button type="submit" class="btn btn-primary pull-right Update-button">Get data</button>
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>                                
                             </div>
                         </div>
                     </div>
+
+                    <link rel="stylesheet" href="css/maps.css">
+                    <div class=" maps">
+                        <div id="map"></div>
+                    </div>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz9Q46tuVMR4_R7MLwHLTO_M4FoTwcMrY"></script>
+                    <script src="js/maps.js"></script>
+                    
                 </div>
             </div>
         </div>
-    </div>
 
 </body>
 <script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
@@ -273,6 +230,7 @@
 <script src="assets/js/bootstrap-notify.js"></script>
 <script src="assets/js/material-dashboard.js?v=1.2.0"></script>
 <script src="assets/js/demo.js"></script>
+
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script>
     // Initialize Firebase
@@ -286,7 +244,8 @@
     };
     firebase.initializeApp(config);
 </script>
-<script src="js/new.js"></script>
+
+<script src="js/update.js"></script>
 <script src="js/logout.js"></script>
 
 </html>
