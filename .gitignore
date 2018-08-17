@@ -1,5 +1,4 @@
-.sass-cache
-.firebaserc
+.sass-cache/*
+.fire*
 404.html
-firebase.json
 placeholder.svg
