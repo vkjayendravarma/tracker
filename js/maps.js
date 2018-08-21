@@ -1,35 +1,41 @@
-$("#post").submit(function (event) {
-  event.preventDefault();
-  firebase.auth().onAuthStateChanged(function (user) {
-    if (user) {
-      var number = $("#vehicle").val();
-      var lagitude = $("#lat").val();
-      var longitude = $("#long").val();
-      var status = "on road";
-      var current;
-      var postdata = {
-        'lat': lagitude,
-        'lng': longitude
-      };
+// $("#post").submit(function (event) {
+//   event.preventDefault();
+//   firebase.auth().onAuthStateChanged(function (user) {
+//     if (user) {
+//       var number = $("#vehicle").val();
+//       var lagitude = $("#lat").val();
+//       var longitude = $("#long").val();
+//       var status = "on road";
+//       var current;
+//       var postdata = {
+//         'lat': lagitude,
+//         'lng': longitude
+//       };
 
-      var newPostRef = firebase.database().ref().child("track").child(number);
-      newPostRef.child("status").set(status);
-      newPostRef.child("current").set(postdata);
-      var locationRef = newPostRef.child("/location");
-      locationRef.push(postdata);
+//       var newPostRef = firebase.database().ref().child("track").child(number);
+//       newPostRef.child("status").set(status);
+//       newPostRef.child("current").set(postdata);
+//       var locationRef = newPostRef.child("/location");
+//       locationRef.push(postdata);
 
-      $("#post")[0].reset();
+//       $("#post")[0].reset();
 
-    } else {
-      window.location.replace("index.html");
-    }
-  });
+//     } else {
+//       window.location.replace("index.html");
+//     }
+//   });
 
-});
+// });
 
 
 // -----------------------------------------
+$(".clear-logs").click(function (e) { 
+  e.preventDefault();
 
+  var dbRef =firebase.database().ref().child('track').child('AP31CM2090');
+  dbRef.child('location').remove();
+  
+});
 
 
 var track = [] ;
@@ -43,10 +49,15 @@ $(document).ready(function () {
         now = snap.val().current;
         var lat = JSON.parse(now.lat);
         var lng = JSON.parse(now.lng);
-        var uluru = { "lat":lat, "lng": lng }; 
-         
-        initMap(uluru,track);
-        
+        var uluru = { "lat":lat, "lng": lng };          
+        initMap(uluru,track);        
+      });
+      searchRef.on("child_added", snap => {        
+        now = snap.val().current;
+        var lat = JSON.parse(now.lat);
+        var lng = JSON.parse(now.lng);
+        var uluru = { "lat":lat, "lng": lng };          
+        initMap(uluru,track);        
       });
 
       var trackRef = searchRef.child("AP31CM2090").child("location");
@@ -114,17 +125,3 @@ uluru = t;
   Path.setMap(map);
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
